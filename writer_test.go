@@ -341,16 +341,16 @@ func TestPaxNonAscii(t *testing.T) {
 func TestPAXHeader(t *testing.T) {
 	medName := strings.Repeat("CD", 50)
 	longName := strings.Repeat("AB", 100)
-	paxTests := [][3]string{
-		{PAX_PATH, "/etc/hosts", "19 path=/etc/hosts\n"},
-		{"a", "b", "6 a=b\n"},          // Single digit length
-		{"a", "names", "11 a=names\n"}, // Test case involving carries
-		{PAX_PATH, longName, fmt.Sprintf("210 path=%s\n", longName)},
-		{PAX_PATH, medName, fmt.Sprintf("110 path=%s\n", medName)}}
+	paxTests := [][2]string{
+		{paxPath + "=/etc/hosts", "19 path=/etc/hosts\n"},
+		{"a=b", "6 a=b\n"},          // Single digit length
+		{"a=names", "11 a=names\n"}, // Test case involving carries
+		{paxPath + "=" + longName, fmt.Sprintf("210 path=%s\n", longName)},
+		{paxPath + "=" + medName, fmt.Sprintf("110 path=%s\n", medName)}}
 
 	for _, test := range paxTests {
-		field, key, expected := test[0], test[1], test[2]
-		if result := paxHeader(field, key); result != expected {
+		key, expected := test[0], test[1]
+		if result := paxHeader(key); result != expected {
 			t.Fatalf("paxHeader: got %s, expected %s", result, expected)
 		}
 	}
