@@ -1,0 +1,2 @@
+git clone https://github.com/dotcloud/tar
+tar czvf golang-tar-dev_0.0~gite5ea6bb.orig.tar.gz tar --exclude=.git

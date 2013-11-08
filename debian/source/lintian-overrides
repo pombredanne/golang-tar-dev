@@ -1,0 +1,4 @@
+# debian/watch is missing intentionally. Russ does not do releases, he just
+# uploads code into the repository. In case codesearch gets a new maintainer
+# who does it differently, debian/watch can be added.
+tar source: debian-watch-file-is-missing
