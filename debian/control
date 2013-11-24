@@ -11,7 +11,10 @@ Vcs-Browser: https://github.com/spiroid/golang-tar-dev
 Package: golang-tar-dev
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: A fork of the upstream Go tar archive (development files)
- This is a fork of the upstream tar archive with PAX header support
+Description: Fork of the upstream Go tar archive (development files)
+ The Go tar lib implements access to tar archives.
+ It aims to cover most of the variations, including those produced by GNU and BSD tars.
+ This is fork adds PAX header support
+ A pull request was created to merge modifications upstream : https://codereview.appspot.com/12561043/
  .
  This package contains the source.
