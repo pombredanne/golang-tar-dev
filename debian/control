@@ -13,8 +13,10 @@ Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Fork of the upstream Go tar archive (development files)
  The Go tar lib implements access to tar archives.
- It aims to cover most of the variations, including those produced by GNU and BSD tars.
- This is fork adds PAX header support
- A pull request was created to merge modifications upstream : https://codereview.appspot.com/12561043/
+ It aims to cover most of the variations, including those produced by
+ GNU and BSD tars.
+ This is a fork that adds PAX header support.
+ A pull request was created to merge modifications upstream
+ @see: https://codereview.appspot.com/12561043/
  .
  This package contains the source.
