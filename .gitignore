@@ -21,6 +21,16 @@ _testmain.go
 
 *.exe
 
+# Files generated at compile time
+/debian/golang-tar-dev/
+/debian/tmp/
+
+# Files generated in debian package generation
+/debian/files
+/debian/golang-tar-dev.substvars
+/debian/golang-tar-dev.debhelper.log
+
+
 # IDE / Text editors files
 *~
 DS_*
