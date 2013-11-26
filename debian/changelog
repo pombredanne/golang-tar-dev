@@ -2,17 +2,4 @@ golang-tar-dev (0.0~gite5ea6bb-1) unstable; urgency=low
 
   * Initial release (Closes: #730508)
 
-  * Debian package generation
-    * Bump debhelper version to 9
-    * Add Vcs-Git and Vcs-Browser pointing to the git repository on github
-    * Copyright file information cleanup
-    * Obsolete debian/README.source removed
-    * debian/source/format file added
-    * close an ITP bug in the changelog
-
-  * Lintian validation fixes
-    * override the debian-watch-file-is-missing lintian warning
-    * fix package description format
-    * close an ITP bug
-
  -- Jonathan Dray <jonathan.dray@gmail.com>  Mon, 25 Nov 2013 23:27:23 +0100
